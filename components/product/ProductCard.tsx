@@ -12,7 +12,7 @@ interface ProductCardProps {
 export default function ProductCard({ productData }: ProductCardProps) {
   const { addToCart } = useCart();
   return (
-    <div className="max-w-xs max-h-[500px] w-full h-full md:px-8 pt-2 pb-5 flex flex-col justify-between rounded-3xl bg-red-500">
+    <div className="max-w-xs max-h-[500px] w-full h-full px-4 md:px-8 pt-2 pb-5 flex flex-col justify-between rounded-3xl bg-red-500">
       <div className="flex items-center flex-col justify-start gap-2 h-full">
         <Image
           src={productData.image}

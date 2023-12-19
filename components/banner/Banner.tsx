@@ -27,19 +27,19 @@ export default function Banner({ bannerData }: BannerProps) {
           key={product.id}
           className="border-2 border-red-500 rounded-3xl z-0"
         >
-          <div className="w-full flex justify-center gap-5 p-5">
+          <div className="w-full flex flex-col md:flex-row justify-center items-center md:items-start gap-5 p-8">
             <Image
               src={product.image}
               alt={product.title}
               width={500}
               height={500}
-              className="w-72 h-72 object-contain"
+              className="w-36 h-36 md:w-72 md:h-72 object-contain"
             />
-            <div className="flex flex-col gap-2 justify-evenly items-start max-w-[40vw]">
-              <p className="text-3xl text-red-500 font-bold line-clamp-2">
+            <div className="flex flex-col gap-2 justify-evenly items-start md:max-w-[40vw]">
+              <p className="text-xl md:text-3xl text-red-500 font-bold line-clamp-2">
                 {product.title}
               </p>
-              <p className="text-xl font-semiboold text-red-500">
+              <p className="md:text-xl font-semiboold text-red-500">
                 ${product.price}
               </p>
               <p className="text-sm text-red-500 line-clamp-3">

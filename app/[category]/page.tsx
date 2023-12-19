@@ -13,7 +13,7 @@ export default async function Category({
       <div className="max-w-7xl w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {categoryData.map((product) => {
           return (
-            <div key={product.id}>
+            <div key={product.id} className="flex justify-center">
               <ProductCard productData={product} />
             </div>
           );

@@ -32,14 +32,14 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
     console.log(cart);
   };
   return (
-    <div className="w-full max-w-7xl flex justify-center">
+    <div className="w-full max-w-7xl flex flex-col md:flex-row justify-center">
       <div className="max-w-7xl flex md:w-1/2 justify-center">
         <Image
           src={product.image}
           alt="productImage"
           height={1000}
           width={1000}
-          className="w-full max-w-[600px] h-[500px] object-contain"
+          className="w-52 h-52 md:w-full max-w-[600px] md:h-[500px] object-contain"
         />
       </div>
       <div className="flex flex-grow flex-col gap-2 max-w-[600px]">
