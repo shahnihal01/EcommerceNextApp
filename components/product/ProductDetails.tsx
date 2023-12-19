@@ -66,7 +66,7 @@ export default function ProductDetails({ product }:ProductDetailsProps){
                     </div>
                     <button 
                         type="submit" 
-                        className="bg-red-500 text-xl font-semibold px-3 py-2 mt-4 rounded-2xl"
+                        className="bg-red-500 text-xl font-semibold px-3 py-2 mt-4 rounded-2xl text-white"
                         onClick={()=>{
                             toast.success('Added to Cart',{
                                 style:{
