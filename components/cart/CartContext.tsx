@@ -1,4 +1,4 @@
-'use client'
+'use client';
 // CartContext.js
 import { createContext, useContext, useState, ReactNode, useMemo } from 'react';
 import { ProductType } from '@/types/productTypes';
@@ -31,7 +31,9 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
 
   const addToCart = (product: ProductType, quantity: number) => {
     setCart((prevCart) => {
-      const existingCartItem = prevCart.find((item) => item.product.id === product.id);
+      const existingCartItem = prevCart.find(
+        (item) => item.product.id === product.id
+      );
 
       if (existingCartItem) {
         return prevCart.map((item) =>
@@ -46,7 +48,9 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   };
 
   const removeFromCart = (productId: number) => {
-    setCart((prevCart) => prevCart.filter((item) => item.product.id !== productId));
+    setCart((prevCart) =>
+      prevCart.filter((item) => item.product.id !== productId)
+    );
   };
 
   const clearCart = () => {
@@ -56,7 +60,9 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   const increaseQuantity = (productId: number) => {
     setCart((prevCart) =>
       prevCart.map((item) =>
-        item.product.id === productId ? { ...item, quantity: item.quantity + 1 } : item
+        item.product.id === productId
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
       )
     );
   };
@@ -72,7 +78,10 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   };
 
   const getTotalCartValue = (): number => {
-    return cart.reduce((total, item) => total + item.product.price * item.quantity, 0);
+    return cart.reduce(
+      (total, item) => total + item.product.price * item.quantity,
+      0
+    );
   };
 
   const memoizedValue = useMemo(
