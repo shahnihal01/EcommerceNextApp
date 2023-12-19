@@ -13,8 +13,8 @@ export default function CartDetails() {
   } = useCart();
   return (
     <div className="w-full max-w-7xl flex justify-center">
-      <div className="w-full flex gap-5">
-        <div className="w-2/3 flex flex-col gap-2">
+      <div className="w-full flex flex-col md:flex-row gap-5">
+        <div className="w-full md:w-2/3 flex flex-col gap-2">
           {cart.length === 0 ? (
             <div className="text-center text-red-500 text-3xl font-bold">
               {' '}
@@ -66,7 +66,7 @@ export default function CartDetails() {
                 </div>
                 <div className="h-full flex flex-col gap-2">
                   <p className="text-sm text-red-500">Total Price</p>
-                  <p className="text-lg font-semibold text-red-500">
+                  <p className="text-sm md:text-lg font-semibold text-red-500">
                     ${(product.product.price * product.quantity).toFixed(2)}
                   </p>
                 </div>
